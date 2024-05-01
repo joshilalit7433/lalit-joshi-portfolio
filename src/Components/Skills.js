@@ -4,7 +4,7 @@ export default function Skills() {
   return (
     <>
 
-<div className="flex justify-center align-middle  bg-[#000000]  pb-[50px]  " id='skills'>
+<div className="flex justify-center align-middle  bg-[#000000] pt-[100px] pb-[50px] lg:pt-[100px]  " id='skills'>
        <p className="text-4xl  text-white lg:text-5xl font-heading">SKILLS</p> 
     </div> 
 
