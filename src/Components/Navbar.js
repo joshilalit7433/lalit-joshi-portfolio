@@ -45,6 +45,12 @@ export default function Navbar() {
           </Link>
         </li>
 
+        <li className="hover:text-[#576CBC] lg:px-4 "  >
+          <Link to='projects' smooth={true} duration={500}  >
+           PROJECTS
+          </Link>
+        </li>
+
         <li  className="hover:text-[#576CBC] lg:px-4">
           <Link to='contact' smooth={true} duration={500} >
            CONTACT
@@ -79,6 +85,12 @@ export default function Navbar() {
         <li  className="hover:text-[#576CBC] lg:px-4  my-[15px]">
           <Link onClick={togglebtn} to='skills' smooth={true} duration={500} >
           SKILLS
+          </Link>
+        </li>
+
+        <li  className="hover:text-[#576CBC] lg:px-4  my-[15px]">
+          <Link onClick={togglebtn} to='projects' smooth={true} duration={500}>
+            PROJECTS
           </Link>
         </li>
 
