@@ -3,7 +3,7 @@ import React from 'react'
 export default function Education() {
   return (
     <>
-    <div className="flex justify-center align-middle  bg-[#000000]  " id="education">
+    <div className="flex justify-center align-middle  bg-[#000000] pt-[100px]  lg:pt-[100px] " id="education">
     <p className="text-4xl  text-white lg:text-5xl font-heading">EDUCATION</p> 
     </div> 
 
