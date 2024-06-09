@@ -7,17 +7,18 @@ export default function Main() {
     words:["front-end developer.","Professional Coder.","Tech Enthusiast."],
     loop:{},
     typeSpeed:100,
-    deleteSpeed:40
+    deleteSpeed:40,
+    
   })
   return (
     <>
     
-    <div className="grid lg:grid-cols-2 lg:grid-rows-1 bg-[#000000]  pb-[50px]   grid-rows-2 pt-[100px] " id="main">
+    <div className="grid lg:grid-cols-2 lg:grid-rows-1   pb-[50px]   grid-rows-2 pt-[100px] " id="main">
 
         <div className="pl-[30px] pt-[10px] lg:pl-[80px] lg:pt-[100px] mt-[10px]">
-            <p className="text-2xl capitalize text-white lg:text-6xl">hello everyone welcome to my portfolio.</p>
-            <p className="text-4xl capitalize text-white lg:text-7xl">i'm <b>Lalit Joshi a</b></p> 
-           <p className="text-4xl capitalize text-white lg:text-7xl"> {typeeffect}</p>
+            <p className="text-2xl capitalize  lg:text-6xl">hello everyone welcome to my portfolio.</p>
+            <p className="text-4xl capitalize  lg:text-7xl">i'm <b>Lalit Joshi a</b></p> 
+           <p className="text-4xl capitalize  lg:text-7xl"> {typeeffect}</p>
         </div>
 
         <div className="mt-[-40px] flex justify-center  lg:pl-[200px] lg:pt-[100px] ">
