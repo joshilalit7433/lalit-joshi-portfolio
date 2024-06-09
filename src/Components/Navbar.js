@@ -4,10 +4,20 @@ import { useState } from 'react';
 import { Link } from 'react-scroll';
 import Menu from './Menu';
 import Close from './Close';
+import { ThemeContext } from '../context/Theme';
+import Dark from './Dark';
+import Light from './Light';
+
+
+
 
 
 
 export default function Navbar() {
+
+  const [{ change,mode }] = React.useContext(ThemeContext);
+
+
 
   const[btn,setbtn]=useState(false)
  
@@ -17,16 +27,33 @@ export default function Navbar() {
 
  
 
+
+
+ 
+
   return (
     <>
-    <div className="bg-black h-[80px]  fixed top-0 left-0 right-0 w-screen  ">
+    <div className="  lg:h-[100px] h-[80px]    ">
+
+        
       
       <div className=" pt-6 lg:pl-[50px] flex justify-center lg:mr-[1100px] lg:pt-[10px]">
-        <p className="font-logo text-white text-3xl font-extrabold tracking-widest lg:text-[50px]">Lalit Joshi</p>
+
+        <div className="lg:hidden ml-[-80px] mt-[-6px] ">
+      <button onClick={change}  >{mode?<Dark/>:<Light/>}</button>
+      </div>
+      
+      <div className="ml-[40px]">
+        <p className=" font-logo text-3xl font-extrabold tracking-widest lg:text-[50px] ">Lalit Joshi</p>
+        </div>
+
       </div>
 
      
-        <ul className=" hidden    lg:flex lg:justify-end  text-center  lg:pr-[50px] lg:mt-[-30px] text-white  text-2xl cursor-pointer font-bold   bg-black  ">
+        <ul className=" hidden    lg:flex lg:justify-end  text-center  lg:pr-[50px] lg:mt-[-30px]  text-2xl cursor-pointer font-bold    ">
+          <li>
+          <button onClick={change}  >{mode?<Dark/>:<Light/>}</button>
+          </li>
         <li className="hover:text-[#576CBC] lg:px-4 "  >
           <Link to='main' smooth={true} duration={500}  >
             HOME
@@ -45,6 +72,12 @@ export default function Navbar() {
           </Link>
         </li>
 
+        <li className="hover:text-[#576CBC] lg:px-4 "  >
+          <Link to='projects' smooth={true} duration={500}  >
+           PROJECTS
+          </Link>
+        </li>
+
         <li  className="hover:text-[#576CBC] lg:px-4">
           <Link to='contact' smooth={true} duration={500} >
            CONTACT
@@ -55,7 +88,7 @@ export default function Navbar() {
 
      
 
-      <div onClick={togglebtn} className="flex justify-end  pr-[20px] lg:hidden mt-[-27px] pb-[-100px] " >
+      <div onClick={togglebtn} className="flex justify-end  pr-[20px] lg:hidden mt-[-35px] pb-[-100px] " >
       <button className="h-[25px] w-[25px]  "   >{btn ? <Close/> :  <Menu/> }</button>
       </div>
 
@@ -70,6 +103,7 @@ export default function Navbar() {
           </Link>
         </li>
 
+
         <li  className="hover:text-[#576CBC] lg:px-4  my-[15px]">
           <Link onClick={togglebtn} to='education' smooth={true} duration={500}>
             EDUCATION
@@ -83,10 +117,18 @@ export default function Navbar() {
         </li>
 
         <li  className="hover:text-[#576CBC] lg:px-4  my-[15px]">
+          <Link onClick={togglebtn} to='projects' smooth={true} duration={500}>
+            PROJECTS
+          </Link>
+        </li>
+
+        <li  className="hover:text-[#576CBC] lg:px-4  my-[15px]">
           <Link onClick={togglebtn} to='contact' smooth={true} duration={500} >
            CONTACT
           </Link>
         </li>
+
+        
   </ul>
   </div>
     </div>
