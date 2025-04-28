@@ -1,31 +1,44 @@
-import React from 'react'
-import {useTypewriter,Cursor} from "react-simple-typewriter"
+import React from "react";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 export default function Main() {
+  const [typeeffect] = useTypewriter({
+    words: ["front-end developer.", "Professional Coder.", "Tech Enthusiast."],
+    loop: true,
+    typeSpeed: 100,
+    deleteSpeed: 40,
+  });
 
-  const[typeeffect]=useTypewriter({
-    words:["front-end developer.","Professional Coder.","Tech Enthusiast."],
-    loop:{},
-    typeSpeed:100,
-    deleteSpeed:40,
-    
-  })
   return (
     <>
-    
-    <div className="grid lg:grid-cols-2 lg:grid-rows-1   pb-[50px]   grid-rows-2 pt-[100px] " id="main">
-
-        <div className="pl-[30px] pt-[10px] lg:pl-[80px] lg:pt-[100px] mt-[10px]">
-            <p className="text-2xl capitalize  lg:text-6xl">hello everyone welcome to my portfolio.</p>
-            <p className="text-4xl capitalize  lg:text-7xl">i'm <b>Lalit Joshi a</b></p> 
-           <p className="text-4xl capitalize  lg:text-7xl"> {typeeffect}</p>
+      <div
+        className="grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 items-center px-6 lg:px-24 py-12 lg:py-24 gap-10"
+        id="main"
+      >
+        {/* Text Section */}
+        <div className="flex flex-col justify-center space-y-4">
+          <p className="text-2xl lg:text-6xl capitalize">
+            hello everyone, welcome to my portfolio.
+          </p>
+          <p className="text-4xl lg:text-7xl capitalize">
+            i'm <b>Lalit Joshi</b> a
+          </p>
+          <p className="text-3xl lg:text-6xl capitalize text-orange-600">
+            {typeeffect}
+            <Cursor />
+          </p>
         </div>
 
-        <div className="mt-[-40px] flex justify-center  lg:pl-[200px] lg:pt-[100px] ">
-          <img src='./Images/lalit.jpeg' className=" h-[280px] w-[280px] lg:h-[500px] lg:w-[500px] bg-white rounded-full  border-4 border-black"></img>
+        {/* Image Section */}
+        <div className="flex justify-center">
+          <img
+            src="./Images/lalit.jpeg"
+            alt="Lalit Joshi"
+            className="h-[250px] w-[250px] lg:h-[450px] lg:w-[450px] rounded-full border-4 border-black object-cover"
+          />
         </div>
-
-    </div><hr/>
+      </div>
+      <hr />
     </>
-  )
+  );
 }

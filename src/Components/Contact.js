@@ -1,25 +1,60 @@
-import React from 'react'
+import React from "react";
 
 export default function Contact() {
   return (
     <>
-    <div className="flex justify-center align-middle    pt-[100px]  pb-[50px] lg:pt-[100px] " id='contact'>
-       <p className="text-4xl  lg:text-5xl font-heading"> CONTACT</p>
-    </div> 
+      {/* Contact Heading */}
+      <div className="flex justify-center pt-[100px] pb-[50px]" id="contact">
+        <p className="text-4xl lg:text-5xl font-heading">CONTACT</p>
+      </div>
 
-    <div className="grid grid-rows-2    pb-[10px] lg:grid " >
-        <div className=" pb-[50px] flex flex-col items-center justify-center">
-            <p className="capitalize text-5xl  lg:text-4xl font-contact">find me on</p>
-            <div className="flex pt-[25px] gap-x-8">
-           <a href='https://www.linkedin.com/in/lalit-joshi-73ba50255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' ><img src="./Images/linkedin.png" alt="linkedin" className="h-[50px] w-[50px]"></img></a>
-            <a href='https://github.com/joshilalit7433'><img src="./Images/github1.png" alt="github" className="h-[50px] w-[50px] bg-white"></img></a>
-            <a href='https://www.instagram.com/lalitjoshiii?igsh=MTFoYmZta2Q5cWx5dg=='> <img src="./Images/instagram.png" alt="instagram" className="h-[50px] w-[50px]"></img></a>
-            </div>
+      {/* Contact Links */}
+      <div className="flex flex-col items-center pb-[50px]">
+        <p className="capitalize text-4xl lg:text-5xl font-contact">
+          Find me on
+        </p>
+
+        <div className="flex pt-[25px] gap-10">
+          <a
+            href="https://www.linkedin.com/in/lalit-joshi-73ba50255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 transition-transform"
+          >
+            <img
+              src="./Images/linkedin.png"
+              alt="LinkedIn"
+              className="h-[50px] w-[50px]"
+            />
+          </a>
+
+          <a
+            href="https://github.com/joshilalit7433"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 transition-transform"
+          >
+            <img
+              src="./Images/github1.png"
+              alt="GitHub"
+              className="h-[50px] w-[50px] rounded-full bg-white p-1"
+            />
+          </a>
+
+          <a
+            href="https://www.instagram.com/lalitjoshiii?igsh=MTFoYmZta2Q5cWx5dg=="
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 transition-transform"
+          >
+            <img
+              src="./Images/instagram.png"
+              alt="Instagram"
+              className="h-[50px] w-[50px]"
+            />
+          </a>
         </div>
-
-       
-   
-    </div>
+      </div>
     </>
-  )
+  );
 }

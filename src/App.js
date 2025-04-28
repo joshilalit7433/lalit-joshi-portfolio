@@ -8,22 +8,18 @@ import { ThemeContext } from "./context/Theme";
 import React from "react";
 
 export default function App() {
-
   const [{ style }] = React.useContext(ThemeContext);
-
-
-
 
   return (
     <>
-    <div style={style}>
-    <Navbar/>
-    <Main/>
-    <Education/>
-    <Skills/>
-    <Projects/>
-    <Contact/>
-    </div>
+      <div style={style}>
+        <Navbar />
+        <Main />
+        <Education />
+        <Skills />
+        <Projects />
+        <Contact />
+      </div>
     </>
-  )
+  );
 }

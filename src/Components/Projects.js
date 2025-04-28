@@ -1,51 +1,66 @@
-import React from 'react'
+import React from "react";
 
 export default function Projects() {
   return (
     <>
-    <div className="flex justify-center align-middle  pt-[100px] pb-[50px] lg:pt-[100px] " id='projects'>
-       <p className="text-4xl   lg:text-5xl font-heading">PROJECTS</p> 
-    </div> 
+      {/* Projects Heading */}
+      <div className="flex justify-center pt-[100px] pb-[50px]" id="projects">
+        <p className="text-4xl lg:text-5xl font-heading">PROJECTS</p>
+      </div>
 
-    <div className=" grid grid-cols-1 pl-[40px] lg:grid lg:grid-rows-1 lg:grid-cols-3   lg:place-content-evenly  lg:pb-[50px]">
-
-
-    <div className="mb-[20px]">
-            <div className=" h-[300px] w-[280px] border-4 border-blue-500 lg:h-[350px] lg:w-[350px] lg:cursor-pointer bg-gray-500 rounded-lg">
-                <div>
-                    <a href='https://dice-game-neon-rho.vercel.app/' target='_blank'><img src='./Images/dice.jpg' alt='Tic-Tac-Toe' className=" h-[200px] w-[350px] lg:h-[200px] lg:w-[350px]"></img></a>
-                </div>
-                <p className=" pl-[15px] text-[25px] lg:pl-[15px] lg:pt-[15px] lg:text-[25px] lg:font-bold">Dice Game</p>
-                <p className=" pl-[15px] text-[15px] lg:pl-[15px] lg:pt-[15px] lg:text-[15px] lg:font-medium ">ReactJs,Tailwind CSS,Html</p>
-
+      {/* Projects Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 pb-16">
+        {[
+          {
+            title: "Playit",
+            tools: "MERN STACK",
+            link: "https://playit-webapp.netlify.app/",
+            img: "./Images/playit.png",
+          },
+          {
+            title: "Dice Game",
+            tools: "ReactJs, Tailwind CSS, Html",
+            link: "https://dice-game-neon-rho.vercel.app/",
+            img: "./Images/dice.jpg",
+          },
+          {
+            title: "Tic-Tac-Toe",
+            tools: "ReactJs, Tailwind CSS, Html",
+            link: "https://tic-tac-toe-mocha-three-57.vercel.app/",
+            img: "./Images/tictactoe.png",
+          },
+          {
+            title: "Todo List",
+            tools: "ReactJs, Tailwind CSS, Html",
+            link: "https://todo-list-flame-one-92.vercel.app/",
+            img: "./Images/todo.jpg",
+          },
+        ].map((project, index) => (
+          <div
+            key={index}
+            className="border-4 border-blue-500 rounded-lg bg-gray-500 hover:shadow-2xl hover:shadow-blue-500 flex flex-col items-center overflow-hidden"
+          >
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full h-[200px] overflow-hidden"
+            >
+              <img
+                src={project.img}
+                alt={project.title}
+                className="w-full h-full "
+              />
+            </a>
+            <div className="p-4 text-center">
+              <p className="text-2xl font-bold">{project.title}</p>
+              <p className="text-md font-medium pt-2">{project.tools}</p>
             </div>
-        </div>
+          </div>
+        ))}
+      </div>
 
-        <div className="mb-[20px]">
-            <div className=" h-[300px] w-[280px] border-4 border-blue-500 lg:h-[350px] lg:w-[350px] lg:cursor-pointer  bg-gray-500 rounded-lg">
-                <div>
-                    <a href='https://tic-tac-toe-mocha-three-57.vercel.app/' target='_blank'><img src='./Images/tictactoe.png' alt='Tic-Tac-Toe' className=" h-[200px] w-[350px] lg:h-[200px] lg:w-[350px]"></img></a>
-                </div>
-                <p className=" pl-[15px] text-[25px] lg:pl-[15px] lg:pt-[15px] lg:text-[25px] lg:font-bold">Tic-Tac-Toe</p>
-                <p className=" pl-[15px] text-[15px] lg:pl-[15px] lg:pt-[15px] lg:text-[15px] lg:font-medium ">ReactJs,Tailwind CSS,Html</p>
-
-            </div>
-        </div>
-
-        <div className="mb-[20px]" >
-            <div className="  h-[300px] w-[280px] border-4 border-blue-500 lg:h-[350px] lg:w-[350px] lg:cursor-pointer bg-gray-500 rounded-lg">
-                <div>
-              <a href='https://todo-list-flame-one-92.vercel.app/' target='_blank'  >  <img src='./Images/todo.jpg' alt='Todo List' className="lg:h-[200px] lg:w-[350px]"></img></a>
-                </div>
-                <p className=" pl-[15px] text-[25px] lg:pl-[15px] lg:pt-[15px] lg:text-[25px] lg:font-bold">Todo List</p>
-                <p className=" pl-[15px] text-[15px] lg:pl-[15px] lg:pt-[15px] lg:text-[15px] lg:font-medium ">ReactJs,Tailwind CSS,Html</p>
-
-            </div>
-        </div>
-        
-
-
-    </div><hr/>
+      <hr />
     </>
-  )
+  );
 }
