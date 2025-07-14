@@ -1,116 +1,49 @@
 import React from "react";
 
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaGithub, FaFigma, FaStripe, FaCloudversify } from 'react-icons/fa';
+import { SiTailwindcss, SiExpress, SiMongodb, SiVite, SiSocketdotio, SiJsonwebtokens, SiCloudinary, SiRender, SiNetlify, SiVercel, SiPostman } from 'react-icons/si';
+
 export default function Skills() {
+  const skills = [
+    { name: 'HTML', icon: <FaHtml5 className="text-orange-500" /> },
+    { name: 'CSS', icon: <FaCss3Alt className="text-blue-500" /> },
+    { name: 'JavaScript', icon: <FaJs className="text-yellow-400" /> },
+    { name: 'React', icon: <FaReact className="text-cyan-400" /> },
+    { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-cyan-500" /> },
+    { name: 'Node.js', icon: <FaNodeJs className="text-green-600" /> },
+    { name: 'Express', icon: <SiExpress className="text-gray-400" /> },
+    { name: 'MongoDB', icon: <SiMongodb className="text-green-500" /> },
+    { name: 'Vite', icon: <SiVite className="text-purple-400" /> },
+    { name: 'Socket.IO', icon: <SiSocketdotio className="text-gray-300" /> },
+    { name: 'JWT', icon: <SiJsonwebtokens className="text-yellow-500" /> },
+    { name: 'Stripe', icon: <FaStripe className="text-indigo-400" /> },
+    { name: 'Cloudinary', icon: <SiCloudinary className="text-blue-400" /> },
+    { name: 'Render', icon: <SiRender className="text-blue-400" /> },
+    { name: 'Netlify', icon: <SiNetlify className="text-green-400" /> },
+    { name: 'Vercel', icon: <SiVercel className="text-black" /> },
+    { name: 'Git', icon: <FaGitAlt className="text-orange-600" /> },
+    { name: 'GitHub', icon: <FaGithub className="text-black" /> },
+    { name: 'Postman', icon: <SiPostman className="text-orange-400" /> },
+    { name: 'Figma', icon: <FaFigma className="text-pink-500" /> },
+  ];
   return (
     <>
-      {/* Skills Heading */}
-      <div className="flex justify-center pt-[100px] pb-[50px]" id="skills">
-        <p className="text-4xl lg:text-5xl font-heading">SKILLS</p>
-      </div>
-
-      {/* Skills Grid */}
-      <div
-        className="grid grid-cols-2 sm:grid-cols-3 gap-6 px-6 pb-16"
-        id="skills"
-      >
-        {/* Skill Card 1 */}
-        <div className="relative rounded-b-2xl border-x-2 border-b-4 border-orange-500 bg-black flex flex-col items-center p-4 w-full max-w-[200px] sm:max-w-[250px] mx-auto hover:shadow-[0_0_30px_5px] hover:shadow-orange-500 transition-all duration-500">
-          <img
-            src="./Images/html.png"
-            alt="HTML"
-            className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px]"
-          />
-          <p className="text-xl sm:text-2xl text-white pt-4">HTML</p>
+      <section id="skills" className="py-24 md:py-20 lg:py-16 xl:py-12 bg-white">
+        <div className="min-h-[120px] flex flex-col items-center justify-center">
+          <p className="text-3xl lg:text-5xl font-heading text-charcoal font-bold">SKILLS</p>
+          <p className="text-base lg:text-lg text-charcoal mt-2 font-normal">Technologies and tools I use to build modern web applications</p>
         </div>
-
-        {/* Skill Card 2 */}
-        <div className="relative rounded-b-2xl border-x-2 border-b-4 border-blue-500 bg-black flex flex-col items-center p-4 w-full max-w-[200px] sm:max-w-[250px] mx-auto hover:shadow-[0_0_30px_5px] hover:shadow-blue-500 transition-all duration-500">
-          <img
-            src="./Images/css.png"
-            alt="CSS"
-            className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px]"
-          />
-          <p className="text-xl sm:text-2xl text-white pt-4">CSS</p>
+        <div className="max-w-7xl mx-auto px-4 pt-12">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-y-10 gap-x-6">
+            {skills.map((skill) => (
+              <div key={skill.name} className="flex flex-col items-center group">
+                <span className="text-4xl mb-2 group-hover:scale-110 transition-transform">{skill.icon}</span>
+                <span className="text-sm text-charcoal font-medium">{skill.name}</span>
+              </div>
+            ))}
+          </div>
         </div>
-
-        {/* Skill Card 3 */}
-        <div className="relative rounded-b-2xl border-x-2 border-b-4 border-yellow-500 bg-black flex flex-col items-center p-4 w-full max-w-[200px] sm:max-w-[250px] mx-auto hover:shadow-[0_0_30px_5px] hover:shadow-yellow-500 transition-all duration-500">
-          <img
-            src="./Images/js.png"
-            alt="JavaScript"
-            className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px]"
-          />
-          <p className="text-xl sm:text-2xl text-white pt-4">JAVASCRIPT</p>
-        </div>
-
-        {/* Skill Card 4 */}
-        <div className="relative rounded-b-2xl border-x-2 border-b-4 border-blue-500 bg-black flex flex-col items-center p-4 w-full max-w-[200px] sm:max-w-[250px] mx-auto hover:shadow-[0_0_30px_5px] hover:shadow-blue-500 transition-all duration-500">
-          <img
-            src="./Images/react.png"
-            alt="React JS"
-            className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px]"
-          />
-          <p className="text-xl sm:text-2xl text-white pt-4">REACT JS</p>
-        </div>
-
-        {/* Skill Card 5 */}
-        <div className="relative rounded-b-2xl border-x-2 border-b-4 border-blue-500 bg-black flex flex-col items-center p-4 w-full max-w-[200px] sm:max-w-[250px] mx-auto hover:shadow-[0_0_30px_5px] hover:shadow-blue-500 transition-all duration-500">
-          <img
-            src="./Images/tailwindcss.png"
-            alt="Tailwind CSS"
-            className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px]"
-          />
-          <p className="text-xl sm:text-2xl text-white pt-4">TAILWIND CSS</p>
-        </div>
-
-        {/* Skill Card 6 */}
-        <div className="relative rounded-b-2xl border-x-2 border-b-4 border-white bg-black flex flex-col items-center p-4 w-full max-w-[200px] sm:max-w-[250px] mx-auto hover:shadow-[0_0_30px_5px] hover:shadow-white transition-all duration-500">
-          <img
-            src="./Images/github.png"
-            alt="GitHub"
-            className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px]"
-          />
-          <p className="text-xl sm:text-2xl text-white pt-4">GITHUB</p>
-        </div>
-
-        <div className="relative rounded-b-2xl border-x-2 border-b-4 border-orange-500 bg-black flex flex-col items-center p-4 w-full max-w-[200px] sm:max-w-[250px] mx-auto hover:shadow-[0_0_30px_5px] hover:shadow-orange-500 transition-all duration-500">
-          <img
-            src="./Images/postman.png"
-            alt="GitHub"
-            className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px]"
-          />
-          <p className="text-xl sm:text-2xl text-white pt-4">POSTMAN</p>
-        </div>
-
-        <div className="relative rounded-b-2xl border-x-2 border-b-4 border-green-500 bg-black flex flex-col items-center p-4 w-full max-w-[200px] sm:max-w-[250px] mx-auto hover:shadow-[0_0_30px_5px] hover:shadow-green-500 transition-all duration-500">
-          <img
-            src="./Images/mongodb.png"
-            alt="GitHub"
-            className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px]"
-          />
-          <p className="text-xl sm:text-2xl text-white pt-4">MONGODB</p>
-        </div>
-
-        <div className="relative rounded-b-2xl border-x-2 border-b-4 border-gray-700 bg-black flex flex-col items-center p-4 w-full max-w-[200px] sm:max-w-[250px] mx-auto hover:shadow-[0_0_30px_5px] hover:shadow-gray-700 transition-all duration-500">
-          <img
-            src="./Images/expressjs.png"
-            alt="GitHub"
-            className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px]"
-          />
-          <p className="text-xl sm:text-2xl text-white pt-4">EXPRESS JS </p>
-        </div>
-
-        <div className="relative rounded-b-2xl border-x-2 border-b-4 border-green-500 bg-black flex flex-col items-center p-4 w-full max-w-[200px] sm:max-w-[250px] mx-auto hover:shadow-[0_0_30px_5px] hover:shadow-green-500 transition-all duration-500">
-          <img
-            src="./Images/nodejs.png"
-            alt="GitHub"
-            className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px]"
-          />
-          <p className="text-xl sm:text-2xl text-white pt-4">NODE JS </p>
-        </div>
-      </div>
-
-      <hr />
+      </section>
     </>
   );
 }

@@ -1,66 +1,49 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import { FiExternalLink } from 'react-icons/fi';
 
 export default function Projects() {
   return (
     <>
       {/* Projects Heading */}
-      <div className="flex justify-center pt-[100px] pb-[50px]" id="projects">
-        <p className="text-4xl lg:text-5xl font-heading">PROJECTS</p>
-      </div>
-
-      {/* Projects Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 pb-16">
-        {[
-          {
-            title: "Playit",
-            tools: "MERN STACK",
-            link: "https://playit-webapp.netlify.app/",
-            img: "./Images/playit.png",
-          },
-          {
-            title: "Dice Game",
-            tools: "ReactJs, Tailwind CSS, Html",
-            link: "https://dice-game-neon-rho.vercel.app/",
-            img: "./Images/dice.jpg",
-          },
-          {
-            title: "Tic-Tac-Toe",
-            tools: "ReactJs, Tailwind CSS, Html",
-            link: "https://tic-tac-toe-mocha-three-57.vercel.app/",
-            img: "./Images/tictactoe.png",
-          },
-          {
-            title: "Todo List",
-            tools: "ReactJs, Tailwind CSS, Html",
-            link: "https://todo-list-flame-one-92.vercel.app/",
-            img: "./Images/todo.jpg",
-          },
-        ].map((project, index) => (
-          <div
-            key={index}
-            className="border-4 border-blue-500 rounded-lg bg-gray-500 hover:shadow-2xl hover:shadow-blue-500 flex flex-col items-center overflow-hidden"
-          >
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full h-[200px] overflow-hidden"
-            >
-              <img
-                src={project.img}
-                alt={project.title}
-                className="w-full h-full "
-              />
-            </a>
-            <div className="p-4 text-center">
-              <p className="text-2xl font-bold">{project.title}</p>
-              <p className="text-md font-medium pt-2">{project.tools}</p>
-            </div>
+      <section id="projects" className="py-24 md:py-20 lg:py-16 xl:py-12 bg-white">
+        <div className="min-h-[120px] flex flex-col items-center justify-center">
+          <p className="text-3xl lg:text-5xl font-heading text-charcoal font-bold">PROJECTS</p>
+          <p className="text-base lg:text-lg text-charcoal mt-2 font-normal">A selection of my recent work, built with modern web technologies</p>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 pt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+            {[
+              {
+                title: "Playit",
+                tools: "MERN STACK",
+                description: "A full-featured music streaming web app with user authentication, playlists, and real-time audio streaming. Built using MongoDB, Express, React, and Node.js.",
+                link: "https://playit-webapp.netlify.app/",
+                img: "./Images/playit.png",
+              },
+              {
+                title: "Dice Game",
+                tools: "ReactJs, Tailwind CSS, Html",
+                description: "A fun and interactive dice game built with React. Features smooth animations, responsive design, and simple game logic for all ages.",
+                link: "https://dice-game-neon-rho.vercel.app/",
+                img: "./Images/dice.jpg",
+              }
+            ].map((project) => (
+              <div key={project.title} className="flex flex-col overflow-hidden rounded-xl shadow-lg border border-gray-200 bg-white">
+                <img src={project.img} alt={project.title} className="w-full h-64 object-cover" />
+                <div className="flex flex-col justify-start items-center px-6 py-6 text-center">
+                  <p className="text-charcoal text-2xl font-bold mb-2 drop-shadow-lg">{project.title}</p>
+                  <p className="text-blue-700 text-xs font-semibold mb-2 tracking-wide">{project.tools}</p>
+                  <p className="text-gray-700 text-sm mb-4 font-normal leading-relaxed">{project.description}</p>
+                  <a href={project.link} target="_blank" rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 border border-blue-700 rounded-full text-blue-700 hover:bg-blue-700 hover:text-white transition-all font-semibold text-sm shadow-md"
+                  >View Project <FiExternalLink /></a>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-
-      <hr />
+        </div>
+      </section>
     </>
   );
 }
