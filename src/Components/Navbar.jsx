@@ -19,7 +19,7 @@ export default function Navbar() {
 
         {/* Center Nav Links (Desktop Only) */}
         <ul className="hidden lg:flex items-center space-x-6 text-sm lg:text-base font-medium font-[Montserrat] text-white dark:text-black">
-          {["main", "education", "skills", "projects", "contact"].map((section) => (
+          {["main", "education", "skills", "projects"].map((section) => (
             <li key={section}>
               <Link
                 to={section}
@@ -76,7 +76,7 @@ export default function Navbar() {
       {btn && (
         <div className="lg:hidden mt-2 px-6 py-4 bg-white dark:bg-black rounded-2xl shadow-md border border-gray-300 dark:border-gray-700">
           <ul className="flex flex-col items-center gap-6 text-base font-[Montserrat] text-black dark:text-white">
-            {["main", "education", "skills", "projects", "contact"].map((section) => (
+            {["main", "education", "skills", "projects"].map((section) => (
               <li key={section}>
                 <Link
                   to={section}
