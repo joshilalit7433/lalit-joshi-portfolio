@@ -1,12 +1,12 @@
 import React from "react";
 import {
   FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs,
-  FaGitAlt, FaGithub, FaFigma, FaStripe
+  FaGitAlt, FaGithub, FaFigma, FaStripe, FaWordpress, FaSearch
 } from 'react-icons/fa';
 import {
   SiTailwindcss, SiExpress, SiMongodb, SiVite, SiSocketdotio,
   SiJsonwebtokens, SiCloudinary, SiRender, SiNetlify,
-  SiVercel, SiPostman, SiFirebase, SiTypescript
+  SiVercel, SiPostman, SiFirebase, SiTypescript, SiCanva
 } from 'react-icons/si';
 
 export default function Skills() {
@@ -18,37 +18,24 @@ export default function Skills() {
     { name: 'React', icon: <FaReact className="text-cyan-400" /> },
     { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-cyan-500" /> },
     { name: 'Node.js', icon: <FaNodeJs className="text-green-600" /> },
-    {
-      name: 'Express',
-      icon: (
-        <SiExpress className="text-gray-900 dark:text-gray-400" />
-      )
-    },
+    { name: 'Express', icon: <SiExpress className="text-gray-900 dark:text-gray-400" /> },
     { name: 'MongoDB', icon: <SiMongodb className="text-green-500" /> },
     { name: 'Firebase', icon: <SiFirebase className="text-orange-500" /> },
     { name: 'Vite', icon: <SiVite className="text-purple-400" /> },
-    {
-      name: 'Socket.IO',
-      icon: (
-        <SiSocketdotio className="text-gray-800 dark:text-gray-300" />
-      )
-    },
+    { name: 'Socket.IO', icon: <SiSocketdotio className="text-gray-800 dark:text-gray-300" /> },
     { name: 'JWT', icon: <SiJsonwebtokens className="text-yellow-500" /> },
     { name: 'Stripe', icon: <FaStripe className="text-indigo-400" /> },
     { name: 'Cloudinary', icon: <SiCloudinary className="text-blue-400" /> },
     { name: 'Render', icon: <SiRender className="text-blue-400" /> },
     { name: 'Netlify', icon: <SiNetlify className="text-green-400" /> },
-    {
-      name: 'Vercel',
-      icon: <SiVercel className="text-black dark:text-white" />
-    },
+    { name: 'Vercel', icon: <SiVercel className="text-black dark:text-white" /> },
     { name: 'Git', icon: <FaGitAlt className="text-orange-600" /> },
-    {
-      name: 'GitHub',
-      icon: <FaGithub className="text-black dark:text-white" />
-    },
+    { name: 'GitHub', icon: <FaGithub className="text-black dark:text-white" /> },
     { name: 'Postman', icon: <SiPostman className="text-orange-400" /> },
     { name: 'Figma', icon: <FaFigma className="text-pink-500" /> },
+    { name: 'WordPress', icon: <FaWordpress className="text-blue-700" /> },
+    { name: 'SEO', icon: <FaSearch className="text-green-500" /> },
+    { name: 'Canva', icon: <SiCanva className="text-sky-400" /> },
   ];
 
   return (
