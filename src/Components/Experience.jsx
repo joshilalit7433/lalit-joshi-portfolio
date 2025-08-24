@@ -7,7 +7,7 @@ const experiences = [
     period: "August 2025 – Present",
     description:
       "Developing modern, responsive websites using React and WordPress. Optimizing site performance and search engine visibility through SEO best practices.",
-    image: "/images/nsmedia.webp",
+    image: "/Images/nsmedia.webp",
     current: true,
   },
   {
@@ -16,7 +16,7 @@ const experiences = [
     period: "June 2025 – July 2025",
     description:
       "Designed and implemented multiple responsive UI sections, including the homepage and dashboard. Integrated API data into dynamic components, optimized page load speed, and ensured consistent cross-browser performance.",
-    image: "/images/accuracyai.webp",
+    image: "/Images/accuracyai.webp",
     current: false,
   },
 ];
